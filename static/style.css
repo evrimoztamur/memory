@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    color: #424242;
+    margin: 16px auto;
+    padding: 0 16px;
+    min-width: 512px;
+    max-width: 640px;
+}
+
+a {
+    text-decoration: none;
+    color: #F44336;
+}
+
+em {
+    color: #D1CFC3;
+}
+
+p {
+    margin: 12px 0;
+}
+
+img {
+    vertical-align: top;
+    max-width: 100%;
+}
+
+input {
+    font: inherit;
+    background-color: #FFFFFF;
+    border: 2px solid #1A1A1A;
+    border-radius: 4px;
+    padding: 4px 12px;
+}
+
+input:focus {
+    border-color: #37C8AB;
+    outline: unset;
+}
+
+input:hover {
+    border-color: #2CA089;
+}
+
+input[type="text"] {
+    width: 160px;
+}
+
+input[type="button"] {
+    cursor: pointer;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid #1A1A1A;
+    margin: 12px 0;
+}
+
+.logo {
+    height: 48px;
+}
+
+#game-name-input, #game-password-input {
+    flex-grow: 2;
+    margin-right: 8px;
+}
+
+#game-name-display {
+    font-weight: 700;
+}
+
+#game-rows-input, #game-columns-input {
+    width: 60px;
+    text-align: center;
+}
+
+#game-players-display {
+    white-space: pre;
+}
+
+#game-board-view {
+    flex-direction: row;
+    justify-content: center;
+}
+
+#game-card-display {
+    flex-shrink: 0;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.flex-grow {
+    flex-grow: 1;
+}
+
+.card {
+    display: inline-block;
+    margin: 2px;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.75s ease;
+}
+
+.card-image {
+    width: 68px;
+    height: 68px;
+    position: absolute;
+    left: 6px;
+    top: 6px;
+}

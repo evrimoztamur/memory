@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:600,700" rel="stylesheet" type="text/css">
+        <link href="/style.css" rel="stylesheet" type="text/css">
+        <link href="/favicon.ico?v=41" rel="icon">
+        <title>Memory</title>
+    </head>
+
+    <body>
+        <img src="/logo.svg" class="logo">
+        <hr>
+        <div id="login-view">
+            <p>You can pick a username and join below.</p>
+            <p><input id="username-input" type="text" placeholder="Username"></p>
+        </div>
+        <div id="browser-view" style="display: none">
+            <p><span id="username-display"></span></p>
+            <p><span id="users-display"></span></p>
+            <hr>
+            <p class="flex-row"><input id="game-name-input" type="text" placeholder="Game name">
+                <input id="game-password-input" type="text" placeholder="Password (Optional)">
+                <input id="game-create-button" type="button" value="Create game"></p>
+            <p><span id="games-display"></span></p>
+            <p><input id="games-refresh-button" type="button" value="Refresh games"></p>
+        </div>
+        <div id="game-view" style="display: none">
+            <p class="flex-row"><span class="flex-grow"><span id="game-name-display"></span> &mdash; <span id="game-players-display"></span></span>
+                <input id="game-leave-button" type="button" value="Leave game"></p>
+            <p class="flex-row" id="game-settings-view"><span class="flex-grow"><input id="game-rows-input" type="text" value="6"> &times; <input id="game-columns-input" type="text" value="6"> &mdash; <input id="game-firstturn-button" type="button" value="First turn: Author"></span>
+                <input id="game-start-button" type="button" value="Start game"></p>
+            <hr>
+            <div id="game-board-view" style="display: none">
+                <div id="game-card-display"></div>
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.2/socket.io.js"></script>
+        <script src="/memory.js"></script>
+    </body>
+
+</html>
