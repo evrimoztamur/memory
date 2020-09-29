@@ -430,9 +430,7 @@ io.on('connection', function (socket) {
     });
 });
 
-winston.add(winston.transports.File, {
-    filename: __dirname + '/logs/latest.log'
-});
+winston.add(new winston.transports.File({ filename: __dirname + '/logs/latest.log' }));
 
 server.listen(port, function () {
     console.log('Server listening at port %d', port);
